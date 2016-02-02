@@ -1,0 +1,11 @@
+﻿@model MyMVC.Models.Student
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+<form action="/home/updateConfirm/@Model.SID" method="post">
+    Name<input type="text" value=@Model.Name name="t1"/>
+    <input type="submit" value="Add"/>
+
+</form>

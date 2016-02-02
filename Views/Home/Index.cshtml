@@ -1,0 +1,33 @@
+﻿@model List<MyMVC.Models.Student>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>STUDENT's LIST</h2>
+<table>
+    <tr>
+        <td>
+           SID
+        </td>
+        
+        <td>
+            Name
+        </td>
+    </tr>
+    @foreach(var s in Model)
+    {
+        <tr>
+        <td>
+      @s.SID
+        </td>
+            
+        <td>
+        @s.Name
+        </td>
+            <td>
+                <a href="/Home/Update/@s.SID">Update</a>
+               
+            </td>
+        </tr>
+    }
+</table>
